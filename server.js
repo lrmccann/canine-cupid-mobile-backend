@@ -28,9 +28,9 @@ app.use(bodyParser.json());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ccusers", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users", { useNewUrlParser: true, useUnifiedTopology: true });
 //ccmobile doesnt for any of the three combos , 503 error with users
-//
+// ccusers doesnt for any of the three combos , 503 error with users
 
 
 app.get("/status", function(req, res) {
