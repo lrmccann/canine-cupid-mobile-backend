@@ -28,10 +28,10 @@ app.use(bodyParser.json());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ccmobile", { useNewUrlParser: true, useUnifiedTopology: true });
-//users didnt work
-// ccmobile ? 
-//ccusers
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ccusers", { useNewUrlParser: true, useUnifiedTopology: true });
+//ccmobile doesnt for any of the three combos , 503 error with users
+//
+
 
 app.get("/status", function(req, res) {
   res.send("Welcome to Canine Cupid Mobile!");
