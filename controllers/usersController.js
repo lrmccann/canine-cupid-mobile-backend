@@ -204,9 +204,12 @@ module.exports = {
     let matchedYesUsers = account.userData.matchesYes;
     console.log("MatchYes", matchedYesUsers);
     await db.User.find({
-        "userData.userName": {
+      "userData.userName": {
         $in: matchedYesUsers
         }
+        // "userData.userName": {
+        // $in: matchedYesUsers
+        // }
     })
       // .then(result => res.json(result))
       .then(result => {

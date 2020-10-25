@@ -9,7 +9,7 @@ router
   
 router
 .route("/users/:id1/:id2")          //id1 is username, id2 is password
-    .get(usersController.authenticate)
+    // .get(usersController.authenticate)
    
 router
 .route("/user/:id1")            
@@ -31,7 +31,7 @@ router
 // get all info for all Yes matches (for all users in matchesYes array) of user by id (:id1) 
 router
 .route("/usersallyesmatches/:id1")            
-    .get(auth.authentication, usersController.getMatchesYesByName)    //id1 is user Name
+    .get( auth.authentication, usersController.getMatchesYesByName)    //id1 is user Name
 
 // get all info for all No matches (for all users in matchesNo array) of user by id (:id1) 
 router
